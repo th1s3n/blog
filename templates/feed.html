@@ -1,0 +1,19 @@
+{% extends 'pattern.html'%}
+
+{% block title %} Посты в блоге {% endblock %}
+
+{% block body %}
+<div class="container mt-5">    
+    <h1>Список статей</h1>
+    {% for post in posts %}
+    	<div class="alert alert-info">
+    		<h2>{{ post.title }}</h2>
+    		<p>{{ post.intro }}</p>
+			<b>{{ post.date.date() }}</b>
+    		<b>{{ (post.date.time()).strftime('%H:%M') }}</b><br><br>
+    		<a href="/feed/id={{post.id}}" class = "btn btn-warning"> Продолжение </a>
+
+    	</div>
+    {% endfor %}
+</div>
+{% endblock %}

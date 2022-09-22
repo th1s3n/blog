@@ -1,0 +1,15 @@
+{% extends 'pattern.html'%}
+
+{% block title %} Create {% endblock %}
+
+{% block body %}
+<div class="container mt-5">    
+    <h1>Добавим статью к твоему приговору</h1>
+    <form method="post">
+    	<input type="text" name="title" id="title" class="form-control" placeholder="Название"><br>
+    	<textarea type="text" name="intro" id="intro" class="form-control" placeholder="Анонс"></textarea><br>
+    	<textarea type="text" name="text" id="text" class="form-control" placeholder="Текст"></textarea><br>
+    	<input type="submit"  class="btn btn-success" value="go">
+	</form>
+</div>
+{% endblock %}

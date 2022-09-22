@@ -1,0 +1,34 @@
+{% extends 'pattern.html'%}
+
+{% block title %} Спешл фо Dio {% endblock %}
+
+{%block head %}
+<style>
+        body{
+            background-image: url("/images/pinguin.png");
+            background-color: gray;
+            }
+
+        button {
+          display: inline-block;
+          background-color:rgba(0,0,0, 0.8);
+          color: white;
+          font-weight: 700;
+          text-decoration: none;
+          user-select: none;
+          padding: .5em 2em;
+          outline: none;
+          border: 2px solid;
+          border-radius: 1px;
+          transition: 0.2s;
+        } 
+        button:hover { background: rgba(128,128,128, 0.801); }
+        button:active { background: black; }
+    </style>
+{% endblock %}
+
+{% block body %} 
+<form action="/">
+        <p style="text-align: center"><button>вернуться назад</button>
+    </form>
+{% endblock %}
